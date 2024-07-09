@@ -47,7 +47,6 @@ namespace Redis.Cache
                 var map = Convert.ToString(productCache);
                 if (string.IsNullOrEmpty(map))
                 {
-
                     return null;
                 }
                 await cache.SetStringAsync($"{JsonSerializer.Serialize(productCache.Id)}", JsonSerializer.Serialize(productCache),cancellationToken);
